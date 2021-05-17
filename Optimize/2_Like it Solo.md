@@ -23,8 +23,8 @@ int findSingleNum(vector<int>& nums, int n)
     return -1;
 }
 ```
-*Time complexity: O(n²)*
-*Space complexity: O(1)*
+*Time complexity: O(n²)*   
+*Space complexity: O(1)*   
 
 
 ### Approach 2 - Sort
@@ -45,8 +45,8 @@ int findSingleNum(vector<int>& nums, int n)
     return -1;
 }
 ```
-*Time complexity: O(nlogn)*
-*Space complexity: O(1)*
+*Time complexity: O(nlogn)*       
+*Space complexity: O(1)*    
 
 ### Approach 3 - Hash Table
 A hash table can be used to store the frequency of each element efficiently. Then iterate through this hash table and return the number having frequency 1
@@ -64,8 +64,8 @@ int findSingleNum(vector<int>& nums, int n)
     return -1;
 }
 ```
-*Time complexity: O(n)*
-*Space complexity: O(n)*
+*Time complexity: O(n)*         
+*Space complexity: O(n)*   
 
 
 ### Approach 4 - Using Math
@@ -87,8 +87,8 @@ int findSingleNum(vector<int>& nums, int n)
   return 2*set_sum - total_sum;
 }
 ```
-*Time complexity: O(n)*
-*Space complexity: O(n)*
+*Time complexity: O(n)*            
+*Space complexity: O(n)*    
 
 ### Approach 5 - Bit Manipulation
 Concept behind this approach:   
@@ -107,6 +107,6 @@ int findSingleNum(vector<int>& nums, int n)
    return x;
 }
 ```
-*Time complexity: O(n)*
-*Space complexity: O(1)*
+*Time complexity: O(n)*        
+*Space complexity: O(1)*   
 
