@@ -37,7 +37,8 @@ int findUniquePaths(int m, int n)
 *Space complexity: O(m\*n)*
 
 ### Approach 3 - Using Math
-Refer below for explanation
+Consider an example of a 3x4 grid. Refer the figure below for explanation  
+<img src="uniquePathsExplanation_IMG.png" />
 ```cpp
 int findUniquePaths(int m, int n)
 {
