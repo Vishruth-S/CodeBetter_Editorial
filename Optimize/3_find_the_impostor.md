@@ -1,4 +1,4 @@
-# Find the impostor
+# Find duplicate number
 
 ## Problem statement
 Given an array of integers arr containing n + 1 integers where each integer is in the range [1, n] inclusive.
@@ -7,7 +7,7 @@ There is one and only one repeated number in arr, return this repeated number.
 ### Approach 1 - Brute force [TLE]
 For each element in the array, scan the rest of the array check if it repeats. If a duplicate is found, then return it.   
 ```cpp
-int findImpostor(vector<int> arr, int M)
+int findDuplicate(vector<int> arr, int M)
 {
     for(int i=0;i<M;i++)
       {
@@ -27,7 +27,7 @@ int findImpostor(vector<int> arr, int M)
 ### Approach 2 - Sort
 Once the array is sorted, any duplicates would become adjancent elements. So check if any adjacent pair match and return it.  
 ```cpp
-int findImpostor(vector<int> arr, int M)
+int findDuplicate(vector<int> arr, int M)
 {
     sort(arr.begin(),arr.end());
     for (int i = 1; i < M; i++) {
@@ -44,7 +44,7 @@ int findImpostor(vector<int> arr, int M)
 ### Approach 3 - Hash Table
 Insert elements into a hash table and store their frequency. Iterate over this hash table and return the number with frequency > 1.
 ```cpp
-int findImpostor(vector<int> arr, int M)
+int findDuplicate(vector<int> arr, int M)
 {
     vector<long> counts(M);
     for(auto i:arr)
@@ -65,7 +65,7 @@ The idea is to reduce this problem to the Linked List Cycle detection problem: g
 Refer: https://leetcode.com/problems/find-the-duplicate-number/solution/     
 Video explanations: https://www.youtube.com/watch?v=32Ll35mhWg0, https://www.youtube.com/watch?v=dfIqLxAf-8s     
 ```cpp
-int findImpostor(vector<int> arr, int M)
+int findDuplicate(vector<int> arr, int M)
 {
     int tortoise = arr[0];
     int hare = arr[0];
