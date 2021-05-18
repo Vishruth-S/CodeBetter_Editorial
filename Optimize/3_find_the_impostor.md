@@ -60,7 +60,28 @@ int findImpostor(vector<int> arr, int M)
 *Time complexity: O(n)*   
 *Space complexity: O(n)*
 
-### Approach 4 - Floyd's Tortoise and Hare (Cycle Detection) Algorithm
+### Approach 4 - Using Floyd's Tortoise and Hare (Cycle Detection) Algorithm
 The idea is to reduce this problem to the Linked List Cycle detection problem: given a linked list, return the node where the cycle begins.      
+Refer: https://leetcode.com/problems/find-the-duplicate-number/solution/     
+Video explanations: https://www.youtube.com/watch?v=32Ll35mhWg0, https://www.youtube.com/watch?v=dfIqLxAf-8s     
+```cpp
+int findImpostor(vector<int> arr, int M)
+{
+    int tortoise = arr[0];
+    int hare = arr[0];
+    do {
+      tortoise = arr[tortoise];
+      hare = arr[arr[hare]];
+    } while (tortoise != hare);
+
+    tortoise = arr[0];
+    while (tortoise != hare) {
+      tortoise = arr[tortoise];
+      hare = arr[hare];
+    }
+
+    return hare;
+}
+```
 *Time complexity: O(n)*   
 *Space complexity: O(1)*
