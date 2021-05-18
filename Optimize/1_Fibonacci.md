@@ -11,7 +11,7 @@ int fib(int n)
 {
   if(n<=1) 
     return n;
-  return fib(n-1) + fib(n-2);
+  return (fib(n-1) + fib(n-2))%1000000007;
 }
 ```
 *Time complexity: O(2^n)*    
@@ -27,7 +27,7 @@ int fib(int n)
     return n;
   if (FibNums[n] != -1)
       return FibNums[n];
-  return FibNums[n] = fib(n-1) + fib(n-2);
+  return FibNums[n] = (fib(n-1) + fib(n-2))%1000000007;
 }
 ```
 *Time complexity: O(n)*     
@@ -38,11 +38,11 @@ This is the iterative implementation of approach 2.
 ```cpp
 int fib(int n)
 {
-    vector<int> FibNums(n+1, -1);
+    vector<int> fibNums(n+1, -1);
     fibNums[0] = 0;
     fibNums[1] = 1;
     for (int i = 2; i <= n; i++)
-        fibNums[i] = fibNums[i - 1] + fibNums[i - 2];
+        fibNums[i] = (fibNums[i - 1] + fibNums[i - 2])%1000000007;
 
     return fibNums[n];
 }
@@ -60,7 +60,7 @@ int fib(int n)
     n2 = 1;
     for (int i = 2; i <= n; i++)
     {
-        n3 = n1 + n2;
+        n3 = (n1 + n2)%1000000007;
         n1 = n2;
         n2 = n3;
     }
@@ -76,10 +76,12 @@ On solving the recurrence relation F(n) = F(n-1) + F(n-2), F(0) = 0, F(1) = 1, w
 ```cpp
 int fib(int n) {
   double phi = (1 + sqrt(5)) / 2;
-  return round(pow(phi, n) / sqrt(5));
+  return (round(pow(phi, n) / sqrt(5)));
 }
 ```
 *Time complexity: O(1)*     
-*Space complexity: O(1)*
+*Space complexity: O(1)*   
+Note: This appraoch only works for values < 75. For larger values, `pow` overflows integer size, so custom `pow` function must be implemented taking `modulus 1000000007` of value at each step.
+
 
 
