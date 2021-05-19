@@ -1,4 +1,6 @@
 # Maximum sum subarray  
+Problem Link: [maxSumSubarray_codeBetter](https://www.hackerrank.com/contests/temp-1621067388/challenges/algorithm-maximum-subarray-sum)
+
 ## Problem statement  
 Given an integer array arr, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 

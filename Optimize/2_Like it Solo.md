@@ -1,4 +1,5 @@
 # Like it Solo
+Problem link: [LikeItSolo_codeBetter](https://www.hackerrank.com/contests/temp-1621067388/challenges/algorithm-like-it-solo)    
 
 ## Problem statement
 Given a non-empty array of integers arr, every element appears twice except for one. Find that single one.  

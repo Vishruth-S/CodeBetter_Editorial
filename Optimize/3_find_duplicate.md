@@ -1,4 +1,5 @@
 # Find duplicate number
+Problem Link: [findDuplicate_codeBetter](https://www.hackerrank.com/contests/temp-1621067388/challenges/algorithm-find-the-impostor)
 
 ## Problem statement
 Given an array of integers arr containing n + 1 integers where each integer is in the range [1, n] inclusive.
