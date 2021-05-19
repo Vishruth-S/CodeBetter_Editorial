@@ -69,7 +69,7 @@ int findSingleNum(vector<int>& nums, int n)
 
 
 ### Approach 4 - Using Math
-Consider the following example `[a,a,b,b,c]`. Here `c` is repeated. To find `c`, we can use the following formula   
+Consider the following example `[a,a,b,b,c]`. Here `c` is the single number. To find `c`, we can use the following formula   
 `2 ∗ (a+b+c) − (a+a+b+b+c) = c`    
 or more generally,
 `2 * sum(set(nums)) - sum(nums)`     
